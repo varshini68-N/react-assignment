@@ -1,0 +1,301 @@
+:root {
+  --bg: #f7e9ee;
+  --panel: #fff8fb;
+  --accent: #a63d6a;
+  --accent-dark: #7d234d;
+  --text: #3b2a2a;
+  --light-text: #efecf1;
+  --line: #d7cbd4;
+  --success: #2f9e44;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f9e7ed 0%, #f4dde6 100%);
+}
+
+.header {
+  text-align: center;
+  padding: 32px 20px 10px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: clamp(3rem, 5vw, 5rem);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.header p {
+  margin: 8px 0 0;
+  font-size: clamp(1.05rem, 2vw, 1.9rem);
+  color: var(--text);
+}
+
+.header button {
+  margin-top: 18px;
+  background: var(--accent-dark);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 10px 18px;
+  cursor: pointer;
+}
+
+.auth-card {
+  width: min(92vw, 760px);
+  margin: 16px auto 40px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(128, 63, 89, 0.08);
+  padding: 28px 26px 24px;
+}
+
+.auth-card h2 {
+  margin: 0 0 12px;
+  text-align: center;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  color: var(--accent-dark);
+}
+
+.subtitle {
+  text-align: center;
+  margin: 0 0 26px;
+  color: #5d4651;
+  font-size: 1.08rem;
+}
+
+form {
+  display: grid;
+  gap: 18px;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #bcaab5;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 18px 16px;
+  font-size: 1.02rem;
+  color: var(--text);
+}
+
+button[type="submit"],
+.order-action,
+.reset-button,
+.dress-info button,
+.quantity-control button {
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+button[type="submit"],
+.order-action {
+  background: var(--accent);
+  color: white;
+  padding: 16px 18px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+button[type="submit"]:hover,
+.order-action:hover,
+.reset-button:hover,
+.dress-info button:hover,
+.quantity-control button:hover {
+  filter: brightness(1.04);
+}
+
+.switch {
+  margin-top: 24px;
+  text-align: center;
+  color: #5d4651;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: var(--accent-dark);
+  font-weight: 700;
+  cursor: pointer;
+  padding-left: 6px;
+}
+
+.shop-page {
+  padding: 12px 18px 40px;
+}
+
+.dress-store {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dress-store h2 {
+  text-align: center;
+  color: var(--accent-dark);
+  margin: 0 0 8px;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.store-subtitle {
+  text-align: center;
+  color: #5d4651;
+  margin-bottom: 28px;
+}
+
+.dress-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+}
+
+.dress-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(128, 63, 89, 0.06);
+}
+
+.dress-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.dress-info {
+  padding: 18px 16px 20px;
+}
+
+.dress-info h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.2rem;
+}
+
+.dress-price {
+  margin: 10px 0 16px;
+  color: var(--accent-dark);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.dress-info button {
+  width: 100%;
+  background: var(--accent);
+  color: white;
+  padding: 12px 16px;
+  font-weight: 700;
+}
+
+.order-card {
+  text-align: center;
+}
+
+.order-check {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #dff6e6;
+  color: var(--success);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+  margin: 0 auto 18px;
+}
+
+.bill {
+  margin-top: 22px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px 18px;
+  text-align: left;
+}
+
+.bill p,
+.bill h3 {
+  margin: 8px 0;
+}
+
+.order-summary {
+  text-align: left;
+}
+
+.calculator {
+  display: grid;
+  gap: 16px;
+}
+
+.calculator h2 {
+  text-align: center;
+  margin: 0;
+  color: var(--accent-dark);
+}
+
+.calculator label {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.calculator select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: white;
+  padding: 14px 12px;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: min(220px, 100%);
+}
+
+.quantity-control button {
+  background: #f0d6e2;
+  color: var(--accent-dark);
+  width: 46px;
+  height: 46px;
+  font-size: 1.8rem;
+}
+
+.quantity-control span {
+  min-width: 32px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.reset-button {
+  background: #d05a91;
+  color: white;
+  padding: 12px 16px;
+  font-weight: 700;
+}
